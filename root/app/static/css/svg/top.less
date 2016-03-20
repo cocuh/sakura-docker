@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@path_img: "/img";
+
+@svg_background: rgba(10, 10, 10, 1);
+
+@nav_width: 400px;
+@nav_transparent: 0.5;
+@nav_transparent_hover: 0.9;
+@nav_line_height: 60px;
+@nav_title_background: rgba(32, 32, 32,@nav_transparent);
+@nav_title_border_color: rgba(41, 41, 41,@nav_transparent);
+@nav_li_background: rgba(64, 64, 64,@nav_transparent);
+@nav_li_border_color: rgba(72, 72, 72,@nav_transparent);
+@nav_li_background_hover: rgba(72, 72, 72,@nav_transparent_hover);
+@nav_li_width_hover_append: 30px;
+@nav_li_left_space: 20px;
+@nav_transition_time: 0.2s;
+@nav_transition: width @nav_transition_time, background-color @nav_transition_time;
+@nav_transition_mobile: none;
+@nav_li_border: solid 1px @nav_li_border_color;
+
+svg {
+  background: @svg_background;
+}
+
+#background_svg {
+  line {
+    stroke-width: 0.75px;
+  }
+  text {
+    fill: white;
+  }
+  .line_x {
+    stroke: red;
+  }
+  .line_y {
+    stroke: green;
+  }
+  .line_z {
+    stroke: blue;
+  }
+
+  path {
+    stroke: white;
+    stroke-width: 0.75px;
+    fill: none;
+  }
+}
+
+#nav_li {
+  line {
+    stroke: white
+  }
+}
+
+#nav {
+  path {
+    stroke: white;
+    fill: none;
+  }
+  text {
+    fill: white;
+    font-family: 'Gudea', sans-serif;
+    font-size: 28px;
+  }
+  line{
+    stroke:@nav_li_border_color
+  }
+  .nav_li_rect {
+      fill: @nav_li_background;
+  }
+
+  #nav_title {
+    text {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 36px;
+    }
+    line{
+      fill: @nav_title_border_color;
+    }
+    .nav_title {
+      fill: @nav_title_background;
+    }
+  }
+  
+  #nav_xhtml_mode{
+    text{
+      fill:#aaa;
+      font-size: 13px;
+    }
+    rect{
+      fill: @nav_li_background;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/css/svg/top.css" type="text/css"?>
+<?xml-stylesheet href='http://fonts.googleapis.com/css?family=Gudea' type='text/css'?>
+<?xml-stylesheet href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' type='text/css'?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        onload="main()"
+        >
+    <title>typowriter.org</title>
+    <metadata>
+        <rdf:RDF
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                >
+            <rdf:Description rdf:about="http://typowriter.org/">
+                <dc:creator>cocuh</dc:creator>
+                <dc:description>cocuh's web site</dc:description>
+                <dc:date>2014-01-15</dc:date>
+                <dc:format>image/svg+xml</dc:format>
+            </rdf:Description>
+        </rdf:RDF>
+    </metadata>
+    <defs>
+        <rect id="nav_rect" width="{{nav_width}}" height="{{nav_line_height}}">
+            <animateColor attributeName="fill" from="#fff" to="#000" begin="0" dur="3s" fill="freeze    "></animateColor>
+        </rect>
+    </defs>
+
+    <svg id="background_svg"></svg>
+    <svg id="nav">
+        <g id="nav_title">
+            <use xlink:href="#nav_rect" class="nav_title"></use>
+            <line x1="0" y1="0" x2="{{nav_width}}" y2="0"></line>
+            <line x1="0" y1="0" x2="0" y2="{{nav_line_height}}"></line>
+            <image xlink:href="/img/burglar_cat.png" x="270" height="{{nav_line_height}}"
+                   width="{{nav_line_height}}"></image>
+            <line x1="{{nav_width}}" y1="0" x2="{{nav_width}}" y2="{{nav_line_height}}"></line>
+            <text x="{{nav_width / 2}}" y="{{nav_line_height / 2}}" dx="-30" dy="11" text-anchor="middle">Typowriter.org
+            </text>
+        </g>
+        <g id="nav_ul" transform="translate(0,{{nav_line_height}})">
+            {% for idx,(name,url,icon) in menu %}
+                <g class="nav_li">
+                    <a xlink:href="{{url}}">
+                        <g transform="translate(0,{{nav_line_height*idx}})">
+                            <use xlink:href="#nav_rect" class="nav_li_rect"></use>
+                            <line x1="0" y1="0" x2="{{nav_width}}" y2="0"></line>
+                            <text x="{{nav_line_height - 12 + 20 + 5}}" y="{{ nav_line_height/2}}" dy="11">{{name}}</text>
+                            <image xlink:href="{{icon}}" x="20" y="6" width="{{nav_line_height-12}}" height="{{nav_line_height-12}}" ></image>
+                        </g>
+                    </a>
+                </g>
+            {% endfor %}
+            
+        </g>
+        <g id="nav_xhtml_mode" transform="translate(0,{{5 * nav_line_height}})">
+            <a xlink:href="/i_love_xhtml">
+            <rect width="{{nav_width}}" height="20"></rect>
+            <line x1="0" y1="0" x2="{{nav_width}}" y2="0"></line>
+            <text x="{{nav_width}}" y="13" text-anchor="end">back to the XHTML.</text>
+                </a>
+            </g>
+    </svg>
+    <script xlink:href="/top/svg/origami.js"></script>
+    <script xlink:href="/top/svg/index.js"></script>
+    <script xlink:href="/js/ana.js"></script>
+</svg>

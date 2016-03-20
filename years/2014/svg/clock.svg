@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 50"
+        >
+    <style type="text/css">
+        <![CDATA[
+        path {
+            stroke-dasharray: 9999px;
+            stroke-dashoffset: 9999px;
+            -webkit-transition: all linear 1s;
+            -moz-transition: all linear 1s;
+            -ms-transition: all linear 1s;
+            -o-transition: all linear 1s;
+            transition: all linear 1s;
+        };
+        text {
+            font-size: 0.8em;
+        }
+        ]]>
+    </style>
+    <def>
+        <clipPath id="barclip">
+            <rect width="100" height="10"/>
+        </clipPath>
+    </def>
+    <g id="bar">
+        <path d="M0,5L100,5" stroke-width="10" stroke="red" id="month"/>
+        <path d="M0,15L100,15" stroke-width="10" stroke="yellow" id="day"/>
+        <path d="M0,25L100,25" stroke-width="10" stroke="pink" id="hour"/>
+        <path d="M0,35L100,35" stroke-width="10" stroke="blue" id="minute"/>
+        <path d="M0,45L100,45" stroke-width="10" stroke="green" id="second"/>
+    </g>
+    <g id="texts">
+        <g transform="translate(0,0)">
+            <text y="10" clip-path="url(#barclip)">Month</text>
+        </g>
+        <g transform="translate(10,10)">
+            <text y="10" clip-path="url(#barclip)">Day</text>
+        </g>
+        <g transform="translate(20,20)">
+            <text y="10" clip-path="url(#barclip)">Hour</text>
+        </g>
+        <g transform="translate(30,30)">
+            <text y="10" clip-path="url(#barclip)">Minute</text>
+        </g>
+        <g transform="translate(40,40)">
+            <text y="10" clip-path="url(#barclip)">Second</text>
+        </g>
+    </g>
+    <script type="application/javascript">
+        <![CDATA[
+        window.onload = function(){
+            var $month = document.getElementById("month");
+            var $day = document.getElementById("day");
+            var $hour = document.getElementById("hour");
+            var $minute = document.getElementById("minute");
+            var $second = document.getElementById("second");
+            
+            var set_ratio = function(obj, ratio){
+                var length = 9999 - obj.getTotalLength() * ratio;
+                obj.setAttributeNS(null,"style", "stroke-dashoffset:"+length+"px;");
+            };
+            
+            var refresh = function(){
+                var date = new Date();
+                var next_month = new Date();
+                next_month.setMonth(date.getMonth()+1, 0);
+                var current_month_length = next_month.getDay();
+                set_ratio($month, date.getMonth()/12);
+                set_ratio($day, date.getDay()/current_month_length);
+                set_ratio($hour, date.getHours()/24);
+                set_ratio($minute, date.getMinutes()/60);
+                set_ratio($second, date.getSeconds()/60);
+            };
+            setInterval(refresh, 1);
+        };
+        ]]>
+    </script>
+</svg>

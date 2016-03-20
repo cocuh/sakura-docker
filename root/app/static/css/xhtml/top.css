@@ -1,0 +1,133 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+nav {
+  width: 430px;
+  font-family: 'Gudea', sans-serif;
+  font-size: 28px;
+  position: absolute;
+  right: 0px;
+  top: 10%;
+  z-index: 100;
+}
+nav * {
+  vertical-align: middle;
+  line-height: 60px;
+  text-decoration: none;
+  color: white;
+  z-index: 100;
+}
+nav #nav_title {
+  padding-left: 10px;
+  margin-left: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  border-style: solid solid none solid;
+  border-width: 2px;
+  border-color: rgba(41, 41, 41, 0.5);
+  background: rgba(32, 32, 32, 0.5);
+}
+nav #nav_title .nav_burglar_cat {
+  width: 60px;
+  height: 60px;
+  background: url("/img/burglar_cat.png") no-repeat center / contain;
+  display: inline-block;
+}
+nav ul {
+  width: 430px;
+  text-align: right;
+}
+nav li {
+  width: 400px;
+  text-align: left;
+  background: rgba(64, 64, 64, 0.5);
+  list-style: none;
+  display: inline-block;
+  border-top: solid 1px rgba(72, 72, 72, 0.5);
+  -webkit-transition: width 0.2s, background-color 0.2s;
+  -moz-transition: width 0.2s, background-color 0.2s;
+  -ms-transition: width 0.2s, background-color 0.2s;
+  -o-transition: width 0.2s, background-color 0.2s;
+  transition: width 0.2s, background-color 0.2s;
+}
+nav li:hover {
+  width: 430px;
+  background: rgba(72, 72, 72, 0.9);
+}
+nav li .icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+nav li a {
+  margin-left: 20px;
+  width: 100%;
+  display: inline-block;
+}
+nav #nav_svg_mode {
+  margin-left: 30px;
+  text-align: right;
+  color: #aaa;
+  vertical-align: bottom;
+  line-height: 20px;
+  font-size: 13px;
+  border-top: solid 1px rgba(72, 72, 72, 0.5);
+  background: rgba(64, 64, 64, 0.5);
+}
+nav #nav_svg_mode * {
+  line-height: 20px;
+}
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    position: static;
+    z-index: 100;
+  }
+  nav #nav_title,
+  nav #nav_svg_mode {
+    margin-left: 0;
+    width: 100%;
+  }
+  nav ul {
+    width: 100%;
+  }
+  nav li {
+    width: 100%;
+    background: rgba(64, 64, 64, 0.5);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  nav li:hover {
+    width: 100%;
+  }
+}
+#background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+#tsuru {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: transparent;
+}

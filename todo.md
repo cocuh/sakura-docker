@@ -1,0 +1,14 @@
+# todo
+- [ ] blog
+    - nikolasはjupyter notebookが使えてべんり
+    - できればhatenaから撤退する
+    - static?
+- [ ] search
+    - blogが2つになってめんどくさいし、
+    - 考えたメモとかをgoogleできるようにしたい
+    - 多分動的になる
+- [ ] profile
+    - nikolasでいいかな…?
+    - staticになりそう
+- [ ] years
+    - staticでよさそう

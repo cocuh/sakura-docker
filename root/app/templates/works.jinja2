@@ -1,0 +1,111 @@
+{% extends "layout.xhtml" %}
+{% block title %}works - typowriter.org{% endblock %}
+{% block body %}
+<h1>Works</h1>
+<section>
+    <table class="table_space_large table_line">
+        <tr>
+            <td class="table_image">
+                <a href="//2014.typowriter.org/3d.svg/index.svg">
+                    <img src="/img/works/tsuru.png" alt="tsuru"/>
+                </a>
+            </td>
+            <td class="vertical_top">
+                <h2>3d.svg</h2>
+                svgのみで3次元を表現したもの、svgの可能性の追求
+                <br/>
+                draw 3d object, only SVG.
+                <br/>
+                <a href="http://cocu.hatenablog.com/entry/2014/01/03/022437">blog</a>
+                <a href="https://github.com/cocuh/2014-kakizome">github</a>
+                <a href="//2014.typowriter.org/3d.svg/index.svg">link</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_image">
+                <a href="http://mandelbrot.typowriter.org/">
+                    <img src="/img/works/mandelbrot.png" alt="mandelbrot"/>
+                </a>
+            </td>
+            <td class="vertical_top">
+                <h2>manldelbrot</h2>
+                マンデルブロ集合を描画する、WebWorkerで並列化。一夜漬けだからすごいコードが汚い
+                <br/>
+                draw mandelbrot set, using webworker
+                <br/>
+                <a href="http://cocu.hatenablog.com/entry/2013/11/30/000623">blog</a>
+                <a href="https://github.com/cocuh/2013-mandelbrot">github</a>
+                <a href="http://mandelbrot.typowriter.org/">link</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_image">
+                <a href="http://tsukuba_time.typowriter.org">
+                    <img src="/img/works/tsukuba_time.jpg" alt="tsukuba_time"/>
+                </a>
+            </td>
+            <td class="vertical_top">
+                <h2>tsukuba_time</h2>
+                筑波大学生の予定を調整するwebアプリ
+                <br/>
+                web app to adjust schedule for Univ.Tsukuba students.
+                <br/>
+                <a href="https://github.com/cocuh/SVG-Table">used library</a>
+                <a href="http://tsukuba_time.typowriter.org">link</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_image">
+                <a href="https://github.com/cocuh/pysat">
+                    <img src="/img/works/pysat.png" alt="pysat"/>
+                </a>
+            </td>
+            <td>
+                <h2>PySat</h2>
+                Python実装のSATソルバー、CDCLアルゴリズムを採用
+                <br/>
+                おまけでd3.jsとWebSocketによる状態の可視化を試す
+                <br/>
+                Sat Solver in Python, CDCL algorithm.
+                <br/>
+                <s><a href="">blog</a></s>
+                <a href="https://github.com/cocuh/pysat">github</a>
+                <a href="https://rawgithub.com/cocuh/pysat/webdemo/demo-web/slide.svg">slide(large)</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_image">
+                <a href="https://github.com/cocuh/Ame">
+                    <img src="/img/works/ame.png" alt="ame"/>
+                </a>
+            </td>
+            <td class="vertical_top">
+                <h2>Esolang Ame</h2>
+                esolangアドベントカレンダー2012のために書いた言語
+                <br/>
+                当時ハマっていたPythonワンライナーによって実装
+                <br/>
+                <a href="http://cocu.github.io/blog/2012/12/05/180237/">blog</a>
+                <a href="https://github.com/cocuh/Ame">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="table_image">
+                <a href="https://github.com/cocuh/WallpaperChanger">
+                    <img src="/img/works/wallpaperchanger.png" alt="wallpaperchanger"/>
+                </a>
+            </td>
+            <td class="vertical_top">
+                <h2>WallpaperChanger</h2>
+                壁紙を簡単に選べるもの、自分が欲しかった機能を盛り込んだ
+                <br/>
+                ヲ級ちゃんのかわいさから衝動で作った後悔はしていない
+                <br/>
+                <a href="https://github.com/cocuh/WallpaperChanger">
+                    github
+                </a>
+            </td>
+        </tr>
+    </table>
+</section>
+{% endblock body %}

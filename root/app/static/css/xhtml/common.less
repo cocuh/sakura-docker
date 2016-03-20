@@ -1,0 +1,245 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 330px;
+  min-height: 100%;
+  background: #151515;
+  color: #EEE;
+  margin: 0 auto -100px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.clearboth {
+  clear: both;
+}
+
+.indent {
+  padding-left: 5%;
+}
+
+.icon {
+  height: 25px;
+  width: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  opacity: 0.86;
+}
+
+/* site style start */
+article {
+  width: 784px;
+  margin: 0 auto; /* for nav bar and centering */
+  padding: 50px 1% 20px;
+  /*
+  background: #222;
+  border-style: none solid;
+  border-width: 2px;
+  border-color: #333;
+  */
+}
+
+@media (max-width: 800px) {
+  article {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px),(max-device-width: 600) {
+  article {
+    padding-top: 0;
+  }
+}
+
+article a {
+  color: #AAF;
+}
+
+article a:hover {
+  color: #88F;
+}
+
+article a:visited {
+  color: #CAA;
+}
+
+/* ul ol style */
+article li {
+  list-style-position: inside;
+}
+
+article ul ul, article ol ol, article ul ol, article ol ul {
+  /* for nested*/
+  margin-left: 3em;
+}
+
+@media (max-width: 800px) {
+  article ul ul, article ol ol, article ul ol, article ol ul {
+    margin-left: 5%;
+  }
+}
+
+article section {
+  padding-left: 1.5em;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 4em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #FFF;
+  font-size: 2.2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: #FFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.75em;
+  font-weight: normal;
+  margin-top: 13px;
+}
+
+/* TODO:Add styles for mobiles */
+/* site style end */
+
+/* footer style start */
+footer {
+  text-align: right;
+  width: 100%;
+  color: #BBB;
+  position: fixed;
+  bottom: 0;
+}
+
+/* footer style end */
+.fit_right {
+  float: right;
+  padding-right: 10%;
+}
+
+.display_block{
+  display: block;
+}
+
+/* TODO: rewrite for mobile */
+dt {
+  color: #FFF;
+  font-size: 2.2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+dd {
+  font-size: 1.07em;
+  display: list-item;
+  list-style-position: inside;
+  margin-left: 5%;
+  margin-bottom: 3px;
+  /* in 2013 consumption tax is 5% */
+}
+
+table {
+  margin-left: 5%;
+  text-align: left;
+  text-decoration: none;
+  border-style: none;
+}
+
+table * {
+  border-style: none;
+  line-height: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+tr {
+  font-size: 1.1em;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 20px;
+}
+
+th {
+  padding-right: 6px;
+  vertical-align: middle;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.table_icon {
+  text-align: center;
+}
+
+.table_image {
+  width: 30%;
+  min-width: 250px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.vertical_top {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5 {
+  a {
+    text-decoration: none;
+    color: #eee;
+  }
+}
+
+.table_space_large {
+  td {
+    padding: 30px 0 30px 0;
+    height: auto;
+  }
+}
+
+
+.table_line{
+  td{
+    border-bottom: dashed 1px #252525;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+
+@media (max-width: 1000px) {
+  .table_image {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+}

@@ -1,0 +1,12 @@
+<svg width="32" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 32 32">
+<g transform="translate(0 -1020.3622)">
+<path direction="ltr" fill="#fff" block-progression="tb" color="#000000" d="m1,1026.3622 0,20 30,0 0-20zm1.5,1.5 27,0 0,17-27,0z"/>
+<path fill="none" stroke="#fff" d="m4,23c0-6 5-6 5-6h2" transform="translate(0 1020.3622)"/>
+<path fill="none" stroke="#fff" d="m11.3839,2a3.3839,3.3839 0 1,1 -6.7678,0a3.3839,3.3839 0 1,1 6.7678,0z" transform="translate(2.43179 1031.7461)"/>
+<path fill="none" stroke="#fff" d="m17,1043.3622c0-6-5-6-5-6h-2"/>
+<path fill="none" stroke="#fff" stroke-width="2" d="m20,1034.3622c1,0 8,0 8,0"/>
+<path fill="none" stroke="#fff" stroke-width="2" d="m20,1038.3622c1,0 8,0 8,0"/>
+<path fill="none" stroke="#fff" stroke-width="2" d="m20,1042.3622c1,0 8,0 8,0"/>
+<path fill="none" stroke="#fff" stroke-width="2" d="m20,1030.3622c1,0 8,0 8,0"/>
+</g>
+</svg>

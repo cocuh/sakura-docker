@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="cocuh"/>
+    <meta name="keywords" content="cocuh,cocu_628496"/>
+    <meta name="description" content="cocuh's web site"/>
+    <!--<meta name="viewport" content="width=device-width, height=device-height,user-scalable=no"/>-->
+
+    <title>{% block title %}{% endblock %}</title>
+    
+    <link rel="stylesheet" href="/css/xhtml/common.css"/>
+    <link rel="stylesheet" href="/css/xhtml/nav.css"/>
+    <link rel="stylesheet" href="/css/common/icons.css"/>
+    <script src="/js/ana.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<nav>
+    <div id="navtitle">
+        <a href="/">
+            <div class="icon_cat"></div>
+            <div>Typowriter.org</div>
+        </a>
+    </div>
+    <ul>
+        <li><a href="/">
+            <div class="icon_home icon"></div>
+            <div>Top</div>
+        </a></li>
+        <li><a href="/works">
+            <div class="icon_works icon"></div>
+            <div>Works</div>
+        </a></li>
+        <li><a href="http://cocu.hatenablog.com/">
+            <div class="icon_blog icon"
+                 title="Hatena Blog logo is Creative Common, https://github.com/hatena/Hatena-Blog-Logo"></div>
+            <div>Blog</div>
+        </a></li>
+        <li class="hidden"><a href="/link">
+            <div class="icon_link icon"></div>
+            <div>Link</div>
+        </a></li>
+        <li><a href="/about">
+            <div class="icon_about icon"></div>
+            <div>About</div>
+        </a></li>
+    </ul>
+</nav>
+{% block article %}
+<article>
+    {% block body %}{%- endblock body %}
+</article>
+{% endblock article %}
+</body>
+</html>
