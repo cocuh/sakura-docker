@@ -1,3 +1,3 @@
 FROM nginx:stable-alpine
-RUN rm -r /etc/nginx/site-enabled
-ADD sites-enabled /etc/nginx/sites-enabled
+ADD conf.d /etc/nginx/conf.d
+ADD nginx.conf /etc/nginx/nginx.conf
