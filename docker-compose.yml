@@ -1,7 +1,7 @@
 version: '2'
 services:
-  root:
-    build: root
+  default:
+    build: default
   
   years:
     build: years
@@ -24,7 +24,7 @@ services:
       - years
       - mandelbrot
     links:
-      - root:root_typowriter
+      - default:default_typowriter
       - years:years_typowriter
       - mandelbrot:mandelbrot_typowriter
     ports:
