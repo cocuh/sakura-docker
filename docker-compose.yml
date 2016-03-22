@@ -15,8 +15,8 @@ services:
       - /var/www/mandelbrot
     read_only: true
     
-  nginx:
-    build: nginx
+  proxy:
+    build: proxy
     depends_on:
       - years
       - mandelbrot
