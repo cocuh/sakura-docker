@@ -1,0 +1,15 @@
+root:
+  build: root
+
+#years:
+#  build: years
+
+nginx:
+  build: nginx
+#  links:
+#    - root:root_typowriter
+##    - years:years_typowriter
+##  volumes_from:
+##    - years
+#  ports:
+#    - "80:80"

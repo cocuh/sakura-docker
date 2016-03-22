@@ -1,13 +1,19 @@
-FROM python:3.5-alpine
+FROM debian:jessie
 MAINTAINER cocuh <cocuh.kk at gmail.com>
 
-RUN apk update
-RUN mkdir -p /usr/src/app
+RUN apt-get update -y \
+    && apt-get upgrade -y
+RUN apt-get install -y python3-minimal \
+    && apt-get install -y python3-pip
+RUN mkdir -p /usr/src/app \
+    && mkdir -p /var/run/typowriter/
 WORKDIR /usr/src/app
 
 COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY uwsgi.ini /usr/src/app/
+RUN pip3 install -r requirements.txt
 
-COPY app /usr/src/app 
+COPY app /usr/src/app
 
-CMD ["/usr/local/bin/gunicorn", "-w", "2", "-b", ":8000", "app:app"]
+
+CMD ["uwsgi", "--chdir", "/usr/src/app" "--ini", "uwsgi.ini"]
