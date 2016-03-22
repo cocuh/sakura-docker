@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mandelbrot Set</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+    <link href="css/index.css" rel="stylesheet" media="screen"/>
+
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ana.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <link href="css/bootstrap-select.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div id="wrapper">
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas_over"></canvas>
+</div>
+<div id="sidebar" class="panel_right">
+    <div id="sidebarswitch" class="sidebar">
+        <span id="sidebar-yaji" class="glyphicon glyphicon-chevron-right"></span>
+        <span class="glyphicon glyphicon-list"></span>
+    </div>
+    <div id="sidebarhelp" class="sidebar" data-toggle="modal" data-target="#modal-help">
+        ?
+    </div>
+
+    <div id="status"></div>
+    <div class="progress">
+      <div id="progress-bar" class="progress-bar">
+      </div>
+    </div>
+
+    <div class="buttons">
+            <input type="button" value="reset" id="reset" class="btn" />
+            <input type="button" value="convert_to_png" id="png" class="btn" />
+            <input type="button" value="redraw" id="redraw" class="btn btn-danger" />
+    </div>
+
+
+    <div id="time"></div>
+    <div id="mouse"></div>
+    <div>
+        <span id="formula">C=x+iy</span><br />
+        <input type="text" id="xmin"> &lt; x &lt; <input type="text" id="xmax"><br />
+        <input type="text" id="ymin"> &lt; y &lt; <input type="text" id="ymax">
+    </div>
+    <div>Threads: <input type="text" id="worker" /></div>
+    <div>Maxiter:<input type="text" id="maxiter" /></div>
+    <div>
+    settype:
+    <select id="set_selector" class="selectpicker" data-width="100%" data-style="btn-inverse">
+        <option>mandelbro</option>
+        <option>burning ship</option>
+    </select>
+    color scheme:
+    <select id="color_selector" class="selectpicker" data-width="100%" data-style="btn-inverse">
+        <option value="grayscale">grayscale</option>
+        <option value="grayscale_inv">grayscale inverse</option>
+        <option value="hsv">HSV</option>
+        <option value="custom">custom</option>
+    </select>
+    </div>
+    <div id="colorpallet">
+        <canvas id="colorpallet-gradiate"></canvas>
+        <div id="colorpallet-bottom">
+            <div id="colorpallet-canvas">
+                <canvas id="colorpallet-point"></canvas>
+                <canvas id="colorpallet-triangle"></canvas>
+                <canvas id="colorpallet-circle"></canvas>
+            </div>
+            <div id="colorpallet-params">
+                <div class="input-group">
+                    h:
+                   <input type="text" placeholder=""  id="colorpallet-h">
+                </div>
+                <div class="input-group">
+                    s:
+                   <input type="text" placeholder="" id="colorpallet-s">
+                </div>
+                <div class="input-group">
+                    v:
+                   <input type="text" placeholder="" id="colorpallet-v">
+                </div>
+                <input type="text" placeholder="" id="colorpallet-rgb">
+                <input type="button" class="btn" id="colorpallet-delete" value="delete" />
+                <input type="button" class="btn btn-danger" id="colorpallet-ok" value="ok" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-help">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">機能</h4>
+      </div>
+      <div class="modal-body">
+      <h4> 1.ズーム</h4>
+      拡大したい部分をドラッグするとズームします。
+      <h4> 2.移動</h4>
+      ホイールでドラッグすると移動します。
+      <h4> 3.集合</h4>
+      別の集合もsettypeを選択することで変更できます。<br />
+      各種パラメータがサイドバーで変更できます
+      <h4> 4.色変化</h4>
+      色調を変えたい時、colorschemeを変えることで色調を変えることができます。<br />
+      customにした場合、下のグラデーションバーを弄ることによって好きな色調にできます。<br />
+      変更後はredrawをクリックするとこで反映されます。
+      <h4> 5.並列処理</h4>
+      webworkerを用いて並列処理化しました。<br />
+      threadのパラメータを変えることで増やしたり減らしたりできます
+      <h4> 6.画像出力</h4>
+      convert_to_pngで画像化できます。
+      </div>
+      <div class="modal-footer">
+        s1211342<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+</html>

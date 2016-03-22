@@ -3,5 +3,5 @@ FROM busybox
 
 MAINTAINER cocuh <cocuh.kk at gmail.com>
 
-RUN mkdir -p /var/www/years
-COPY data /var/www/years
+RUN mkdir -p /var/www/mandelbrot
+COPY data /var/www/mandelbrot
