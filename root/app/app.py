@@ -13,6 +13,7 @@ mimetypes.add_type('text/xsl', '.xsl')
 PATH = os.path.abspath(os.path.dirname(__file__))
 
 config = {
+    'static_url_path': ''
 }
 
 app = Flask(__name__, **config)

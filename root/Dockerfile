@@ -16,4 +16,4 @@ RUN pip3 install -r requirements.txt
 COPY app /usr/src/app
 
 
-CMD ["uwsgi", "--chdir", "/usr/src/app" "--ini", "uwsgi.ini"]
+CMD ["uwsgi", "--chdir", "/usr/src/app", "--ini", "uwsgi.ini"]

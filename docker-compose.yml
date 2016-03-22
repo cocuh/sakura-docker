@@ -6,10 +6,10 @@ root:
 
 nginx:
   build: nginx
-#  links:
-#    - root:root_typowriter
+  links:
+    - root:root_typowriter
 ##    - years:years_typowriter
 ##  volumes_from:
 ##    - years
-#  ports:
-#    - "80:80"
+  ports:
+    - "80:80"
