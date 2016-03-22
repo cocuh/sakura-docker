@@ -1,15 +1,19 @@
-root:
-  build: root
-
-#years:
-#  build: years
-
-nginx:
-  build: nginx
-  links:
-    - root:root_typowriter
-##    - years:years_typowriter
-##  volumes_from:
-##    - years
-  ports:
-    - "80:80"
+version: '2'
+services:
+  root_typowriter:
+    build: root
+  
+  years_typowriter:
+    build: years
+  
+  nginx:
+    build: nginx
+    depends_on:
+      - years_typowriter
+    links:
+      - root_typowriter:root_typowriter
+      - years_typowriter:years_typowriter
+    volumes_from:
+      - years_typowriter
+    ports:
+      - "80:80"
